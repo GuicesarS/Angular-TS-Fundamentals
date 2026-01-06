@@ -1,0 +1,36 @@
+Objetos tipados geralmente são definidos assim:
+
+let usuario: {id: number; nome: string; ativo: boolean} =
+{
+    id: 1,
+    nome: "Guilherme"
+    ativo: true
+};
+
+**Comparando com C#**
+
+var usuario = new { Id = 1, Nome = "Guilherme", Ativo = true };
+
+**Consumindo uma API e tipando o objeto de resposta**
+
+let produto: {id: number; descricao: string; preco: number};
+
+produto = {
+    id: 10,
+    descricao: "Notebook",
+    preco: 4500
+};
+
+**Exemplo no C#**
+
+public class Produto {
+    public int Id { get; set; }
+    public string Descricao { get; set; }
+    public decimal Preco { get; set; }
+}
+
+var produto = new Produto {
+    Id = 10,
+    Descricao = "Notebook",
+    Preco = 4500
+};
